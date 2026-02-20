@@ -1,0 +1,485 @@
+/* Reset and Base Styles */
+.team-container-2024 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.team-container-2024 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+
+}
+
+/* Dedication Section Styles */
+.dedication-section-2024 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #8b0000 0%, #8b0000 100%);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dedication-content-2024 {
+  flex: 1;
+}
+
+.dedication-title-2024 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.dedication-title-2024::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #ecd71a;
+}
+
+.dedication-name-2024 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.dedication-message-2024 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  font-style: italic;
+}
+
+.dedication-image-2024 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder-2024 {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 5px solid #e74c3c;
+  color: #e74c3c;
+  font-size: 3rem;
+}
+
+.image-placeholder-2024 span {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Team Section Styles */
+.team-section-2024 {
+  margin-top: 40px;
+}
+
+.team-title-2024 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.team-title-2024::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: #3498db;
+}
+
+/* Team Member Card Styles - UPDATED FOR BETTER MOBILE VIEW */
+.team-member-card-2024 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member-card-2024:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Member Header for Mobile - circle image at top-left */
+.member-header-mobile-2024 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* .circle-image-mobile-2024 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+  border: 4px solid white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  margin-right: 20px;
+} */
+
+.member-title-mobile-2024 {
+  flex: 1;
+}
+
+.member-name-mobile-2024 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.member-role-mobile-2024 {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Main Content for Mobile */
+.member-content-mobile-2024 {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-description-mobile-2024 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.member-large-image-mobile-2024 {
+  display: flex;
+  justify-content: center;
+}
+
+.large-image-placeholder-mobile-2024 {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #7f8c8d;
+  font-size: 4rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.large-image-placeholder-mobile-2024 span {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Desktop Styles - Circle image removed from right side */
+.member-header-desktop-2024 {
+  display: none;
+}
+
+.circle-image-desktop-2024 {
+  display: none;
+}
+
+/* Responsive Design */
+/* Tablet View (768px and up) */
+@media (min-width: 768px) {
+  .dedication-section-2024 {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .dedication-image-2024 {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+  
+  /* Team member card layout for tablet */
+  .team-member-card-2024 {
+    flex-direction: column;
+  }
+  
+  .member-header-mobile-2024 {
+    margin-bottom: 25px;
+  }
+  
+  .circle-image-mobile-2024 {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  
+  .member-name-mobile-2024 {
+    font-size: 1.8rem;
+  }
+  
+  .member-role-mobile-2024 {
+    font-size: 1.2rem;
+  }
+  
+  .member-description-mobile-2024 {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+  
+  .large-image-placeholder-mobile-2024 {
+    height: 280px;
+  }
+}
+
+/* Desktop View (992px and up) */
+@media (min-width: 992px) {
+  .dedication-title-2024 {
+    font-size: 3rem;
+  }
+  
+  .dedication-name-2024 {
+    font-size: 2rem;
+  }
+  
+  .team-title-2024 {
+    font-size: 2.5rem;
+  }
+  
+  /* Desktop layout - circle image removed, using mobile header still */
+  .team-member-card-2024 {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .member-header-mobile-2024 {
+    display: none;
+  }
+  
+  .member-header-desktop-2024 {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+  
+  .circle-image-desktop-2024 {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #8b0000;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.2rem;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .member-content-mobile-2024 {
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .member-title-desktop-2024 {
+    margin-bottom: 20px;
+  }
+  
+  .member-name-desktop-2024 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+  }
+  
+  .member-role-desktop-2024 {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .member-description-mobile-2024 {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .member-large-image-mobile-2024 {
+    flex: 1;
+    max-width: 450px;
+  }
+  
+  .large-image-placeholder-mobile-2024 {
+    height: 300px;
+    font-size: 4.5rem;
+  }
+}
+
+/* Mobile View (767px and down) */
+@media (max-width: 767px) {
+  .team-container-2024 {
+    padding: 15px;
+  }
+  
+  .dedication-section-2024 {
+    padding: 20px;
+  }
+  
+  .dedication-title-2024 {
+    font-size: 2rem;
+  }
+  
+  .dedication-name-2024 {
+    font-size: 1.5rem;
+  }
+  
+  .dedication-message-2024 {
+    font-size: 1.1rem;
+  }
+  
+  .team-title-2024 {
+    font-size: 1.8rem;
+  }
+  
+  .team-member-card-2024 {
+    padding: 20px;
+  }
+  
+  .circle-image-mobile-2024 {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .member-name-mobile-2024 {
+    font-size: 1.4rem;
+  }
+  
+  .member-role-mobile-2024 {
+    font-size: 1rem;
+  }
+  
+  .member-description-mobile-2024 {
+    font-size: 1rem;
+  }
+  
+  .large-image-placeholder-mobile-2024 {
+    height: 200px;
+    font-size: 3rem;
+  }
+  
+  .large-image-placeholder-mobile-2024 span {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile View (480px and down) */
+@media (max-width: 480px) {
+  .dedication-title-2024 {
+    font-size: 1.8rem;
+  }
+  
+  .dedication-name-2024 {
+    font-size: 1.3rem;
+  }
+  
+  .dedication-message-2024 {
+    font-size: 1rem;
+  }
+  
+  .image-placeholder-2024 {
+    width: 150px;
+    height: 150px;
+    font-size: 2.5rem;
+  }
+  
+  .team-title-2024 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  
+  .team-member-card-2024 {
+    padding: 15px;
+  }
+  
+  .circle-image-mobile-2024 {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+  
+  .member-name-mobile-2024 {
+    font-size: 1.3rem;
+  }
+  
+  .member-role-mobile-2024 {
+    font-size: 0.95rem;
+  }
+  
+  .member-description-mobile-2024 {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .large-image-placeholder-mobile-2024 {
+    height: 180px;
+    font-size: 2.5rem;
+  }
+  
+  .large-image-placeholder-mobile-2024 span {
+    font-size: 0.9rem;
+  }
+}
+.image-placeholder-2024 {
+ 
+  
+  overflow: hidden;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dedication-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* image cut na ho */
+}

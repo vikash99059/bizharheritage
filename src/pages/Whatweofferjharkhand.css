@@ -1,0 +1,1835 @@
+/* JharkhandProducts.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.jharkhand-products-container {
+  min-height: 100vh;
+  padding-bottom: 40px;
+  background-color: #f8f5f0;
+}
+
+.jharkhand-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+.jharkhand-main-header {
+  text-align: center;
+  padding: 30px 15px 20px;
+  background: linear-gradient(135deg, #1a5e1a 0%, #2e7d32 100%);
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 84px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.jharkhand-header-content {
+  position: relative;
+}
+
+.jharkhand-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  line-height: 1.1;
+}
+
+.jharkhand-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.jharkhand-header-line {
+  width: 120px;
+  height: 4px;
+  background-color: GREEN;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.jharkhand-main-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 🔥 DARK OVERLAY */
+.jharkhand-main-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.55)
+  );
+  border-radius: 0 0 10px 10px;
+}
+
+/* Text ko upar lane ke liye */
+.jharkhand-header-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Filters Section */
+.jharkhand-filters-section {
+  background-color: white;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.jharkhand-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.jharkhand-search-box {
+  width: 100%;
+  position: relative;
+}
+
+.jharkhand-search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 18px;
+}
+
+.jharkhand-search-box input {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: #f9f9f9;
+}
+
+.jharkhand-search-box input:focus {
+  outline: none;
+  border-color: #1a5e1a;
+  background-color: white;
+}
+
+.jharkhand-category-select {
+  width: 100%;
+  position: relative;
+}
+
+.jharkhand-category-select i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  z-index: 1;
+  font-size: 18px;
+}
+
+.jharkhand-category-select select {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  background-color: #f9f9f9;
+}
+
+.jharkhand-category-select select:focus {
+  outline: none;
+  border-color: #1a5e1a;
+  background-color: white;
+}
+
+.jharkhand-clear-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.jharkhand-clear-btn:hover {
+  background-color: #e9ecef;
+  border-color: #999;
+}
+
+.jharkhand-results-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+}
+
+.jharkhand-product-count {
+  background-color: #1a5e1a;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Category Tabs */
+.jharkhand-category-tabs {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 5px 0 15px;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.jharkhand-category-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.jharkhand-category-tabs::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.jharkhand-category-tabs::-webkit-scrollbar-thumb {
+  background: #1a5e1a;
+  border-radius: 3px;
+}
+
+.jharkhand-tab-btn {
+  padding: 12px 16px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.jharkhand-tab-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #1a5e1a;
+}
+
+.jharkhand-tab-btn.jharkhand-active {
+  background-color: #1a5e1a;
+  color: white;
+  border-color: #1a5e1a;
+}
+
+.jharkhand-tab-icon {
+  font-size: 18px;
+}
+
+.jharkhand-tab-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+/* Quotes Section */
+.jharkhand-quotes-section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.jharkhand-quotes-title {
+  font-size: 24px;
+  color: #1a5e1a;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 10px;
+}
+
+.jharkhand-quotes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.jharkhand-quote-category {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #1a5e1a;
+}
+
+.jharkhand-quote-category-title {
+  font-size: 18px;
+  color: #1a5e1a;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.jharkhand-quote-list {
+  list-style-type: none;
+}
+
+.jharkhand-quote-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+  color: #555;
+  font-size: 15px;
+}
+
+.jharkhand-quote-item:last-child {
+  border-bottom: none;
+}
+
+/* Products Grid */
+.jharkhand-products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.jharkhand-product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.jharkhand-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.jharkhand-product-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.jharkhand-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.jharkhand-product-card:hover .jharkhand-product-image img {
+  transform: scale(1.05);
+}
+
+.jharkhand-product-category {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(26, 94, 26, 0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jharkhand-product-content {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.jharkhand-product-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a5e1a;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  min-height: 46px;
+}
+
+.jharkhand-product-english {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.jharkhand-product-description {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+.jharkhand-product-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 18px;
+}
+
+.jharkhand-product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jharkhand-view-btn, .jharkhand-buy-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.jharkhand-view-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.jharkhand-view-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.jharkhand-buy-btn {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.jharkhand-buy-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* No Results */
+.jharkhand-no-results {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+}
+
+.jharkhand-no-results i {
+  font-size: 50px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.jharkhand-no-results h3 {
+  font-size: 22px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.jharkhand-no-results p {
+  color: #888;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* Footer */
+.jharkhand-footer {
+  text-align: center;
+  padding: 25px 0;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.jharkhand-footer p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.jharkhand-copyright {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .jharkhand-product-card:hover {
+    transform: none;
+  }
+  
+  .jharkhand-tab-btn:hover {
+    background-color: white;
+    border-color: #ddd;
+  }
+  
+  .jharkhand-tab-btn.jharkhand-active:hover {
+    background-color: #1a5e1a;
+  }
+  
+  .jharkhand-clear-btn:hover,
+  .jharkhand-view-btn:hover,
+  .jharkhand-buy-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .jharkhand-search-box input,
+  .jharkhand-category-select select,
+  .jharkhand-tab-btn,
+  .jharkhand-clear-btn,
+  .jharkhand-view-btn,
+  .jharkhand-buy-btn {
+    min-height: 48px;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .jharkhand-quotes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .jharkhand-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .jharkhand-filter-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .jharkhand-search-box {
+    flex: 2;
+    min-width: 200px;
+  }
+  
+  .jharkhand-category-select {
+    min-width: 200px;
+    flex: 1;
+  }
+  
+  .jharkhand-clear-btn {
+    width: auto;
+    min-width: 150px;
+  }
+  
+  .jharkhand-filters-section {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .jharkhand-results-info {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 768px) {
+  .jharkhand-quotes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .jharkhand-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .jharkhand-title {
+    font-size: 4rem;
+  }
+  
+  .jharkhand-subtitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .jharkhand-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .jharkhand-title {
+    font-size: 4.5rem;
+  }
+  
+  .jharkhand-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .jharkhand-main-header {
+    padding: 40px 0 25px;
+  }
+}
+@media (max-width: 480px) {
+  .jharkhand-main-header {
+    padding: 40px 0 25px;
+    margin-top: 64px;
+  }
+}
+/* Small Mobile Devices (320px - 480px) */
+@media (max-width: 480px) {
+  .jharkhand-title {
+    font-size: 2.8rem;
+    letter-spacing: 0.5px;
+  }
+  .jharkhand-main-header {
+    padding: 40px 0 25px;
+    margin-top: 64px;
+  }
+  
+  .jharkhand-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .jharkhand-header-line {
+    width: 100px;
+    height: 3px;
+  }
+  
+  .jharkhand-product-image {
+    height: 200px;
+  }
+  
+  .jharkhand-product-content {
+    padding: 15px;
+  }
+  
+  .jharkhand-product-name {
+    font-size: 17px;
+    min-height: 42px;
+  }
+  
+  .jharkhand-product-price {
+    font-size: 19px;
+  }
+  
+  .jharkhand-view-btn, .jharkhand-buy-btn {
+    padding: 13px;
+    font-size: 15px;
+  }
+  
+  .jharkhand-category-tabs {
+    gap: 6px;
+  }
+  
+  .jharkhand-tab-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  
+  .jharkhand-tab-icon {
+    font-size: 16px;
+  }
+  
+  .jharkhand-tab-name {
+    max-width: 100px;
+  }
+  
+  .jharkhand-quotes-section {
+    padding: 15px;
+  }
+  
+  .jharkhand-quotes-title {
+    font-size: 20px;
+  }
+}
+
+/* Cart Popup Styles */
+.jharkhand-cart-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.jharkhand-cart-popup {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: jharkhand-popup-animation 0.3s ease-out;
+}
+
+@keyframes jharkhand-popup-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jharkhand-cart-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background-color: #1a5e1a;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.jharkhand-cart-popup-header h3 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jharkhand-close-popup {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.jharkhand-cart-popup-content {
+  padding: 20px;
+}
+
+.jharkhand-popup-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.jharkhand-popup-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.jharkhand-popup-item-details {
+  flex: 1;
+}
+
+.jharkhand-popup-item-details h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.jharkhand-popup-item-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.jharkhand-popup-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.jharkhand-popup-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.jharkhand-continue-btn, .jharkhand-view-cart-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.jharkhand-continue-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.jharkhand-continue-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.jharkhand-view-cart-btn {
+  background-color: #1a5e1a;
+  color: white;
+}
+
+.jharkhand-view-cart-btn:hover {
+  background-color: #0e4d0e;
+}
+
+/* Cart Icon in Header */
+.jharkhand-cart-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  color: #1a5e1a;
+  margin-left: 20px;
+}
+
+.jharkhand-cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cart Page Styles */
+.jharkhand-cart-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  margin-top: 74px;
+  padding-bottom: 40px;
+}
+
+.jharkhand-cart-header {
+  background-color: #1a5e1a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+.jharkhand-cart-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.jharkhand-back-btn, .jharkhand-clear-cart-btn {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.jharkhand-back-btn:hover, .jharkhand-clear-cart-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.jharkhand-empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.jharkhand-empty-cart i {
+  font-size: 60px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.jharkhand-empty-cart h2 {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.jharkhand-empty-cart p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.jharkhand-cart-items {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.jharkhand-cart-item {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.jharkhand-cart-item:last-child {
+  border-bottom: none;
+}
+
+.jharkhand-cart-item-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.jharkhand-cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.jharkhand-cart-item-details {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.jharkhand-cart-item-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.jharkhand-cart-item-english {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.jharkhand-cart-item-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a5e1a;
+  margin: 0 0 15px 0;
+}
+
+.jharkhand-cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.jharkhand-quantity-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jharkhand-quantity-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.jharkhand-quantity {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+
+.jharkhand-remove-btn {
+  padding: 8px 15px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.jharkhand-remove-btn:hover {
+  background-color: #ff3333;
+}
+
+.jharkhand-cart-summary {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+}
+
+.jharkhand-cart-summary h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 22px;
+}
+
+.jharkhand-summary-details {
+  margin-bottom: 25px;
+}
+
+.jharkhand-summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.jharkhand-summary-row:last-child {
+  border-bottom: none;
+}
+
+.jharkhand-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a5e1a;
+}
+
+.jharkhand-checkout-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a5e1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.jharkhand-checkout-btn:hover {
+  background-color: #0e4d0e;
+}
+
+/* Responsive Cart */
+@media (max-width: 768px) {
+  .jharkhand-cart-popup {
+    width: 95%;
+  }
+  .jharkhand-cart-page{
+    margin-top: 60px;
+  }
+  
+  .jharkhand-cart-item {
+    flex-direction: column;
+  }
+  
+  .jharkhand-cart-item-image {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .jharkhand-cart-item-details {
+    padding-left: 0;
+  }
+  
+  .jharkhand-popup-actions {
+    flex-direction: column;
+  }
+  
+  .jharkhand-cart-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .jharkhand-cart-header h1 {
+    order: 1;
+  }
+  
+  .jharkhand-back-btn {
+    order: 2;
+  }
+  
+  .jharkhand-clear-cart-btn {
+    order: 3;
+  }
+}
+/* Payment Page Styles */
+.jharkhand-payment-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding-bottom: 40px;
+}
+
+.jharkhand-payment-header {
+  background-color: #1a5e1a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+.jharkhand-payment-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.jharkhand-payment-methods {
+  /* background-color: white; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.jharkhand-payment-methods h2 {
+  margin: 0 0 25px 0;
+  color: #333;
+  font-size: 22px;
+  border-bottom: 2px solid #1a5e1a;
+  padding-bottom: 10px;
+}
+
+.jharkhand-payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.jharkhand-payment-option {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.jharkhand-payment-option:hover {
+  border-color: #1a5e1a;
+  background-color: #f9f9f9;
+}
+
+.jharkhand-payment-option.selected {
+  border-color: #1a5e1a;
+  background-color: #f0f9f0;
+}
+
+.jharkhand-payment-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #1a5e1a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.jharkhand-payment-details {
+  flex: 1;
+}
+
+.jharkhand-payment-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.jharkhand-payment-details p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.jharkhand-payment-check {
+  color: #1a5e1a;
+  font-size: 24px;
+}
+
+/* Online Payment Methods */
+.jharkhand-online-payment-methods {
+  margin: 30px 0;
+  padding: 25px;
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+}
+
+.jharkhand-online-payment-methods h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.jharkhand-online-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.jharkhand-online-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.jharkhand-online-option:hover {
+  border-color: #1a5e1a;
+  background-color: white;
+}
+
+.jharkhand-online-option.selected {
+  border-color: #1a5e1a;
+  /* background-color: #f0f9f0; */
+}
+
+.jharkhand-online-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #1a5e1a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.jharkhand-online-option span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Payment Summary */
+.jharkhand-payment-summary {
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.jharkhand-payment-summary h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+  border-bottom: 2px solid #1a5e1a;
+  padding-bottom: 10px;
+}
+
+.jharkhand-confirm-payment-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a5e1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.jharkhand-confirm-payment-btn:hover:not(:disabled) {
+  background-color: #0e4d0e;
+}
+
+.jharkhand-confirm-payment-btn:disabled {
+  /* background-color: #cccccc; */
+  cursor: not-allowed;
+}
+
+/* Payment Success Page */
+.jharkhand-payment-success {
+  min-height: 100vh;
+  /* background-color: #f5f5f5; */
+  padding-bottom: 40px;
+}
+
+.jharkhand-success-header {
+  background-color: #1a5e1a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+.jharkhand-success-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.jharkhand-success-content {
+  /* background-color: white; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.jharkhand-success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 20px;
+}
+
+.jharkhand-success-content h2 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.jharkhand-invoice-details {
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.jharkhand-invoice-details h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 2px solid #1a5e1a;
+  padding-bottom: 10px;
+}
+
+.jharkhand-invoice-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.jharkhand-invoice-row:last-child {
+  border-bottom: none;
+}
+
+.jharkhand-invoice-row span:first-child {
+  font-weight: 600;
+  color: #555;
+}
+
+.jharkhand-invoice-row span:last-child {
+  color: #1a5e1a;
+  font-weight: 600;
+}
+
+.jharkhand-success-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jharkhand-download-invoice-btn, .jharkhand-back-to-products-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+  min-width: 200px;
+}
+
+.jharkhand-download-invoice-btn {
+  background-color: #1a5e1a;
+  color: white;
+}
+
+.jharkhand-download-invoice-btn:hover {
+  background-color: #0e4d0e;
+}
+
+.jharkhand-back-to-products-btn {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.jharkhand-back-to-products-btn:hover {
+  background-color: #e6b800;
+}
+
+.jharkhand-success-message {
+  background-color: #f0f9f0;
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.jharkhand-success-message p {
+  margin: 10px 0;
+  color: #2e7d32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jharkhand-payment-option {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .jharkhand-payment-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .jharkhand-online-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .jharkhand-success-actions {
+    flex-direction: column;
+  }
+  
+  .jharkhand-download-invoice-btn, .jharkhand-back-to-products-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .jharkhand-online-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .jharkhand-payment-methods {
+    padding: 20px 15px;
+  }
+  
+  .jharkhand-success-content {
+    padding: 20px 15px;
+  }
+}
+/* Story Popup Styles */
+.jharkhand-story-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.jharkhand-story-popup {
+  width: 800px;
+  max-width: 90%;
+  max-height: 100vh;
+  background: linear-gradient(135deg, #1a472a 0%, #0d2818 100%);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 2px solid #2e7d32;
+  animation: popupSlideIn 0.4s ease;
+}
+
+.jharkhand-story-popup-header {
+  background: linear-gradient(to right, #1b5e20, #2e7d32);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #4caf50;
+}
+
+.jharkhand-story-popup-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jharkhand-story-popup-header h3 i {
+  color: #ffd54f;
+}
+
+.jharkhand-close-popup {
+  background: #ff5252;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.jharkhand-close-popup:hover {
+  background: #ff1744;
+  transform: rotate(90deg);
+}
+
+.jharkhand-story-popup-content {
+  display: flex;
+  height: calc(90vh - 80px);
+}
+
+.jharkhand-story-left {
+  flex: 1;
+  padding: 25px;
+  background: linear-gradient(135deg, #0d2818 0%, #1a472a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-right: 2px solid #2e7d32;
+}
+
+.jharkhand-story-left img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #4caf50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.jharkhand-story-image-info {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.jharkhand-story-image-info h4 {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.jharkhand-story-price {
+  color: #ffd54f;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.jharkhand-story-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 15px;
+  background: rgba(46, 125, 50, 0.3);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.jharkhand-story-category-icon {
+  font-size: 1.2rem;
+}
+
+.jharkhand-story-category-name {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.jharkhand-story-right {
+  flex: 1.5;
+  padding: 25px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1a472a 0%, #0d2818 100%);
+}
+
+.jharkhand-story-details {
+  height: 100%;
+}
+
+.jharkhand-story-title {
+  color: white;
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2e7d32;
+  text-align: center;
+}
+
+.jharkhand-story-text {
+  margin-bottom: 25px;
+}
+
+.jharkhand-story-paragraph {
+  color: #e0f2f1;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.jharkhand-story-highlights {
+  background: rgba(255, 213, 79, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 213, 79, 0.3);
+  margin: 25px 0;
+}
+
+.jharkhand-story-highlights h5 {
+  color: #ffd54f;
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jharkhand-story-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jharkhand-story-list li {
+  color: #bbdefb;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(187, 222, 251, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jharkhand-story-list li:before {
+  content: "✓";
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.jharkhand-story-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.jharkhand-story-note {
+  color: #81c784;
+  font-style: italic;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.jharkhand-story-note i {
+  color: #ffd54f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Scrollbar Styling for Story Popup */
+.jharkhand-story-right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.jharkhand-story-right::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.jharkhand-story-right::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 4px;
+}
+
+.jharkhand-story-right::-webkit-scrollbar-thumb:hover {
+  background: #2e7d32;
+}
+
+/* Responsive Design for Story Popup */
+@media (max-width: 900px) {
+  .jharkhand-story-popup {
+    width: 95%;
+    flex-direction: column;
+  }
+  
+  .jharkhand-story-popup-content {
+    flex-direction: column;
+    height: auto;
+    max-height: 80vh;
+  }
+  
+  .jharkhand-story-left {
+    border-right: none;
+    border-bottom: 2px solid #2e7d32;
+  }
+  
+  .jharkhand-story-left img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .jharkhand-story-popup-header {
+    padding: 15px;
+  }
+  
+  .jharkhand-story-popup-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .jharkhand-story-left,
+  .jharkhand-story-right {
+    padding: 15px;
+  }
+  
+  .jharkhand-story-left img {
+    height: 180px;
+  }
+  
+  .jharkhand-story-title {
+    font-size: 1.2rem;
+  }
+  
+  .jharkhand-story-paragraph {
+    font-size: 0.95rem;
+  }
+}

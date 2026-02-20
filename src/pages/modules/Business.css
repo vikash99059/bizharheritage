@@ -1,0 +1,239 @@
+/* BusinessSolutions.css */
+.business-solutions {
+  background: linear-gradient(135deg, #1aa875 0%, #2d3748 100%);
+  color: white;
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 10px;
+  align-items: start;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #cbd5e0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-logo {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.learning-hub {
+  display: flex;
+  align-items: center;
+}
+
+.hub-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  max-width: 500px;
+}
+
+.cta-section {
+  margin-top: 10px;
+}
+
+.cta-button {
+  background: #ffffff;
+  color: #1a365d;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-section {
+  margin-top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #cbd5e0;
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+.clients-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.clients-header h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.client-logo {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 25px 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.client-logo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.client-logo.amazon {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    gap: 40px;
+  }
+  
+  .main-logo {
+    font-size: 3rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .business-solutions {
+    padding: 40px 20px;
+  }
+  
+  .main-logo {
+    font-size: 2.8rem;
+  }
+  
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .business-solutions {
+    padding: 30px 15px;
+  }
+  
+  .main-logo {
+    font-size: 2.2rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .clients-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .client-logo {
+    padding: 20px 15px;
+    min-height: 70px;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-logo {
+    font-size: 1.8rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .clients-header h3 {
+    font-size: 1.2rem;
+  }
+}

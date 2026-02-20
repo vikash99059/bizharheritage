@@ -1,0 +1,128 @@
+/* ===== PAGE BACKGROUND ===== */
+/* ===== SECTION ===== */
+.whatwedo-section {
+  padding: 80px 20px;
+  background: #7b0000;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.whatwedo-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 60px;
+}
+
+.whatwedo-header h1 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.whatwedo-header p {
+  margin-top: 12px;
+  font-size: 18px;
+  color: goldenrod;
+}
+
+/* ===== GRID ===== */
+.whatwedo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ===== CARD ===== */
+.service-card {
+  background: #fffaef;
+  border-radius: 16px;
+  padding: 26px 24px 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== TOP ===== */
+.card-top {
+  text-align: left;
+}
+
+.card-icon {
+  font-size: 34px;
+  color: #9e2a2b;
+  margin-bottom: 10px;
+}
+
+.service-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.gold-line {
+  width: 50px;
+  height: 3px;
+  background: #d4af37;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+/* ===== DESC ===== */
+.card-desc {
+  font-size: 15.5px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ===== LIST ===== */
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list li {
+  font-size: 14.5px;
+  color: #222;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: #9e2a2b;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .whatwedo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .whatwedo-header h1 {
+    font-size: 30px;
+  }
+
+  .whatwedo-header p {
+    font-size: 16px;
+  }
+
+  .whatwedo-grid {
+    grid-template-columns: 1fr;
+  }
+}

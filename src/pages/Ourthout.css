@@ -1,0 +1,158 @@
+/* ===== SECTION ===== */
+/* ===== SECTION ===== */
+/* ===== MAIN SECTION ===== */
+.our-thought-wrapper {
+  position: relative;
+  padding: 10px 10px;
+  background-image: url("./Biharimage/clutureexprience.jpeg"); /* 🔴 apni image yahan */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* DARK OVERLAY */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* INNER */
+.thought-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ===== HEADER ===== */
+.thought-headernew {
+  text-align: center;
+  margin-bottom: 55px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.our-thought-wrapper.show .thought-headernew {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.thought-headernew h3 {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+/* DIVIDER */
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.divider .line {
+  width: 90px;
+  height: 2px;
+  background: linear-gradient(to right, #f2c94c, #9e2a2b);
+}
+
+.divider .icon {
+  font-size: 22px;
+}
+
+/* ===== CARDS GRID ===== */
+.thought-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+/* ===== CARD ===== */
+.thought-card {
+  background: linear-gradient(135deg, #7a0000, #3d1a1a);
+  border-radius: 14px;
+  padding: 26px 22px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.our-thought-wrapper.show .thought-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ICON */
+.thought-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+  color: #f2c94c;
+}
+
+/* TEXT */
+.thought-card p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+.thought-footer {
+  text-align: center;
+  margin-top: 55px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease 0.4s;
+}
+
+.our-thought-wrapper.show .thought-footer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.thought-footer .quote {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f2c94c;
+}
+
+.thought-footer span {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .thought-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .thought-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .thought-headernew h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thought-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .thought-card p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,202 @@
+/* BizharHeritage.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bizhar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f7f2;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
+}
+
+.bizhar-section {
+  margin: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: #d4a762;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+.image-side {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.content-side {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+}
+
+.content-side h3 {
+  font-size: 1.8rem;
+  color: #2c5530;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d4a762;
+}
+
+.content-list {
+  list-style-type: none;
+}
+
+.content-list li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.content-list li i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: #d4a762;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  color: #2c5530;
+  font-weight: 600;
+}
+
+.impact-point {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.business-point {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.tagline {
+  font-style: italic;
+  color: #666;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+  text-align: center;
+}
+
+/* Alternate layout for business model section */
+.alternate .image-side {
+  order: 2;
+}
+
+.alternate .content-side {
+  order: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .image-side {
+    width: 100%;
+    height: 300px;
+  }
+
+  .content-side {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .alternate .image-side {
+    order: 1;
+  }
+
+  .alternate .content-side {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .content-side h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-point, .business-point {
+    font-size: 1rem;
+  }
+}
+
+/* Decorative elements */
+.leaf-decoration {
+  position: absolute;
+  width: 80px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.leaf-left {
+  top: 10%;
+  left: 5%;
+  transform: rotate(-15deg);
+}
+
+.leaf-right {
+  bottom: 10%;
+  right: 5%;
+  transform: rotate(75deg);
+}
+
+/* Animation for images on hover */
+.image-side:hover .section-image {
+  transform: scale(1.05);
+}
