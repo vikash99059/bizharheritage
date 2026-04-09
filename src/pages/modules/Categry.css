@@ -1,0 +1,350 @@
+/* CategoryGrid.css */
+
+.category-section {
+  width: 100%;
+  padding: 30px 20px 50px;
+  max-width: 1450px;
+  margin: 0 auto;  /* Center the entire section */
+  background: transparent;
+}
+
+.category-title {
+  font-size: 34px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #2c1810;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.category-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b3c1c, #d4a574);
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+/* ========== MAIN GRID LAYOUT ========== */
+/* Exactly 5 items per row on large screens */
+/* Automatically wraps to next row if more than 5 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  /* 5 equal columns */
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Individual Category Card */
+.category-card {
+  width: 100%;
+  max-width: 220px;  /* Prevents cards from becoming too wide */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-radius: 24px;
+  padding: 15px 12px;
+  margin: 0 auto;  /* Center each card in its grid cell */
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Circle */
+.category-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* Perfect square */
+  max-width: 160px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f5f0ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .category-image {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(139, 60, 28, 0.15);
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Placeholder when no image */
+.category-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #f5ede5, #e8ddd2);
+  color: #8b3c1c;
+}
+
+/* Category Name */
+.category-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c1810;
+  transition: color 0.3s ease;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 5px;
+}
+
+.category-card:hover .category-name {
+  color: #8b3c1c;
+}
+
+/* Loading State */
+.category-loader {
+  text-align: center;
+  padding: 60px;
+  color: #8b7a6e;
+  font-size: 18px;
+}
+
+.category-loader::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  border: 3px solid #8b3c1c;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error State */
+.category-error {
+  text-align: center;
+  padding: 40px;
+  background: #fff5f5;
+  border-radius: 16px;
+  color: #c0392b;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.category-error button {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 30px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.category-error button:hover {
+  background: #a4281c;
+}
+
+/* Empty State */
+.category-empty {
+  text-align: center;
+  padding: 60px;
+  color: #8b7a6e;
+  font-size: 18px;
+}
+
+/* ============================================ */
+/* RESPONSIVE GRID - Auto adjusts columns */
+/* ============================================ */
+
+/* Large Desktop (1200px+) - 5 columns */
+@media (min-width: 1200px) {
+  .category-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 35px;
+  }
+  
+  .category-image {
+    max-width: 170px;
+  }
+  
+  .category-name {
+    font-size: 17px;
+  }
+}
+
+/* Desktop (992px - 1199px) - 4 columns */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .category-image {
+    max-width: 150px;
+  }
+}
+
+/* Tablet (768px - 991px) - 3 columns */
+@media (max-width: 991px) {
+  .category-title {
+    font-size: 30px;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .category-image {
+    max-width: 130px;
+  }
+  
+  .category-name {
+    font-size: 15px;
+  }
+}
+
+/* Small Tablet / Large Mobile (576px - 767px) - 2 columns */
+@media (max-width: 767px) {
+  .category-section {
+    padding: 20px 15px 40px;
+  }
+  
+  .category-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  
+  .category-title::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .category-card {
+    padding: 10px 8px;
+  }
+  
+  .category-image {
+    max-width: 110px;
+  }
+  
+  .category-name {
+    font-size: 14px;
+  }
+  
+  .category-placeholder {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile (400px - 575px) - 2 columns (smaller gap) */
+@media (max-width: 575px) {
+  .category-title {
+    font-size: 24px;
+  }
+  
+  .category-grid {
+    gap: 15px;
+  }
+  
+  .category-image {
+    max-width: 95px;
+  }
+  
+  .category-name {
+    font-size: 12px;
+  }
+  
+  .category-placeholder {
+    font-size: 2rem;
+  }
+}
+
+/* Small Mobile (320px - 399px) - 2 columns but tighter */
+@media (max-width: 399px) {
+  .category-title {
+    font-size: 22px;
+  }
+  
+  .category-grid {
+    gap: 12px;
+  }
+  
+  .category-image {
+    max-width: 80px;
+  }
+  
+  .category-name {
+    font-size: 11px;
+  }
+  
+  .category-placeholder {
+    font-size: 1.8rem;
+  }
+}
+
+/* Very Small Mobile (up to 319px) - 1 column */
+@media (max-width: 319px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .category-image {
+    max-width: 120px;
+  }
+  
+  .category-name {
+    font-size: 14px;
+  }
+}
+
+/* Touch devices - remove hover effect, keep active state */
+@media (hover: none) and (pointer: coarse) {
+  .category-card:active {
+    transform: scale(0.97);
+  }
+  
+  .category-card:hover {
+    transform: none;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .category-card {
+    transition: none;
+  }
+  
+  .category-card:hover {
+    transform: none;
+  }
+}

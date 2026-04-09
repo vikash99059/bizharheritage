@@ -2,7 +2,7 @@
 /* ===== SECTION ===== */
 .whatwedo-section {
   padding: 80px 20px;
-  background: #7b0000;
+  
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -36,7 +36,7 @@
 
 /* ===== CARD ===== */
 .service-card {
-  background: #fffaef;
+  background: #fff;
   border-radius: 16px;
   padding: 26px 24px 30px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);

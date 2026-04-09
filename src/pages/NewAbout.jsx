@@ -1,6 +1,6 @@
 
 import React from "react";
-import bannerImage from "./Biharimage/visuitbihar.jpeg"; // apni image ka path
+import bannerImage from "./modules/image/bannernew2.avif"; // apni image ka path
 import Aboutcompany from './Aboutcompany';
 import Teamcomponanat from './Teamcomponanat';
 import Ourgroingteam from './Ourgroingteam';
@@ -10,6 +10,9 @@ import Ourthout from './Ourthout';
 import Decated from './Decated';
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer.jsx";
+import Colabrate from "./Colabrate.jsx"; 
+import Founder from "./Allproduct.jsx";  
+import TechSupportTeam from "./TechSupportTeam.jsx"; 
 
 const AboutBanner = () => {
   const navigate = useNavigate();
@@ -21,7 +24,7 @@ const AboutBanner = () => {
         .about-banner {
           position: relative;
           width: 100%;
-          height: 85vh;
+          height: 40vh;
           background-image: url(${bannerImage});
           background-size: cover;
           background-position: center;
@@ -29,7 +32,7 @@ const AboutBanner = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top:60px;
+         
         }
 
         .about-overlay {
@@ -122,18 +125,21 @@ const AboutBanner = () => {
   className="about-btn"
   onClick={() => navigate("/contact")}
 >
-  Join Community
+  Join Us
 </button>
 
         </div>
       </section>
       <Aboutcompany/>
-      <Whatwedo/>
-       <Missionvision/>
-       <Ourthout/>
+      {/* <Whatwedo/> */}
+       {/* <Missionvision/> */}
+       {/* <Ourthout/> */}
        
        <Teamcomponanat/>
+       {/* <Founder/> */}
+       <Colabrate/>
         <Decated/>
+        <TechSupportTeam/>
        <Ourgroingteam/>
         <Footer/>
        

@@ -77,37 +77,31 @@ const coaches = [
   {
     name: "Aastha Singh Rajput",
     title: "Artist Outreach & Medical Professional (MBBS)",
-    subheading: "Aastha Singh Chauhan is a Research Scholar at People’s University, Bhopal, with research interests in infectious diseases and millets as nutraceutical resources. As a volunteer and active member with Bizhar Heritage, she contributes to promoting the rich art, culture, and heritage of Bihar and Jharkhand, aiming to create meaningful cultural impact through community engagement and awareness.",
     image: img1
   },
   {
     name: "Minakshi Upadhyay",
     title: "Artist Support – Ranchi & Delhi",
-    subheading: "Minakshi Upadhyay supports BIZHAR Heritage by helping onboard artists in Ranchi and Delhi. Her role focuses on expanding our creative network and strengthening connections with artists across regions. She is also a social media influencer, helping amplify our artists' voices and promote heritage art to wider digital audiences.",
     image: img2
   },
   {
     name: "Niti Gyan Pathak",
     title: "Artist Support Coordinator",
-    subheading: "Niti Gyan Pathak supports BIZHAR Heritage by helping onboard new artists and strengthening connections within the artisan community. Her efforts contribute to expanding our creative network and empowering more artists to join the heritage movement.",
     image: img3
   },
   {
-    name: "Pragya Pathak ",
+    name: "Pragya Pathak",
     title: "Artist Support",
-    subheading: "Pragya Pathak is a dedicated member of BiZhar Heritage who supports our artists and helps connect them with opportunities. She assists in adding new artists to the platform and also helps in bringing product orders. Her efforts play an important role in promoting handmade art and supporting local talent..",
     image: img4
   },
   {
-    name: "Reshmi Singh ",
+    name: "Reshmi Singh",
     title: "Artist Support",
-    subheading: "Reshmi Singh is a dedicated member of BiZhar Heritage who supports our artists and helps connect them with opportunities. She assists in adding new artists to the platform and also helps in bringing product orders. Her efforts play an important role in promoting handmade art and supporting local talent.",
     image: img5
   }
 ];
 
 const CoachProfiles = () => {
-  const carouselRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   
   // Check if mobile view
@@ -121,309 +115,295 @@ const CoachProfiles = () => {
     
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-  
-  // Auto-scroll only for desktop
-  useEffect(() => {
-    if (isMobile) return;
-    
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-    
-    let scrollAmount = 0;
-    const speed = 0.5;
-    let animationFrameId;
 
-    const step = () => {
-      scrollAmount += speed;
-      if (scrollAmount >= carousel.scrollWidth / 1) {
-        scrollAmount = 0;
-      }
-      carousel.scrollLeft = scrollAmount;
-      animationFrameId = requestAnimationFrame(step);
-    };
-
-    animationFrameId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [isMobile]);
-
-  // For mobile: show regular cards, for desktop: show carousel
-  const displayCoaches = isMobile ? coaches : [...coaches, ...coaches];
+  // For mobile: show as grid, for desktop: continuous scroll
+  // Duplicate array for seamless infinite scrolling on desktop
+  const duplicatedCoachesDesktop = [...coaches, ...coaches, ...coaches];
 
   return (
-    <div style={styles.wrapper}>
-      <p style={{
-          textAlign: 'center',
-          fontSize: '36px',
-          fontWeight: '900',
-          margin: '8px 0',
-          marginTop: '-30px',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
-        }}>
-          <span style={{ color: 'black' }}>SUPPORTIVE PILLARS OF </span>
-          <span style={{ color: '#8b0000' }}> BIZHAR HERITAGE</span>
-        </p>
+    <div className="coach-section">
+      <div className="coach-container">
+        <h2 className="coach-heading">
+          <span className="heading-dark"> Supportive Pillars Of </span>
+          <span className="heading-gold">Bizhar Heritage</span>
+        </h2>
 
-      {/* Desktop: Carousel, Mobile: Grid */}
-      {isMobile ? (
-        <div className="mobile-grid">
-          {displayCoaches.map((card, index) => (
-            <div key={index} className="mobile-card">
-              <div className="mobile-card-content">
-                {/* Circle image at top for mobile */}
-                <div className="mobile-image-container">
-                  <img src={card.image} alt={card.name} className="mobile-card-img" />
-                </div>
-                <div className="mobile-text-content">
-                  <h3 style={{fontSize:'20px',color:'#8b0000',fontFamily:'sans-serif', marginBottom: '5px'}}>{card.name}</h3>
-                  <p style={{color: '#000', fontSize: '14px', marginBottom: '8px'}}>{card.title}</p>
-                  <p style={{color:'black', fontSize:'14px', lineHeight: '1.4', textAlign: 'left', fontFamily: 'sans-serif', marginTop: '10px'}}>
-                    {card.subheading}
-                  </p>
-                </div>
+        {/* Desktop: Continuous Scroll - Mobile: Grid View */}
+        {isMobile ? (
+          <div className="mobile-grid">
+            {coaches.map((card, index) => (
+              <div key={index} className="mobile-card">
+                <h4 className="mobile-name">{card.name}</h4>
+                <p className="mobile-title">{card.title}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div ref={carouselRef} className="carousel">
-          {displayCoaches.map((card, index) => (
-            <div key={index} style={styles.card} className="card">
-              <img src={card.image} alt={card.name} className="card-img" />
-              <div className="text-overlay">
-                <button className="info-button">
-                  <div className="info-header">
-                    <h3 style={{fontSize:'20px',color:'#8b0000',fontFamily:'sans-serif', marginBottom: '5px'}}>{card.name}</h3>
-                    <p style={{color: '#000', fontSize: '14px', marginBottom: '8px'}}>{card.title}</p>
-                    <div className="info-details">
-                      <p style={{color:'black', fontSize:'14px', lineHeight: '1.4', textAlign: 'left', fontFamily: 'sans-serif'}}>
-                        {card.subheading}
-                      </p>
-                    </div>
+            ))}
+          </div>
+        ) : (
+          <div className="marquee-row">
+            <div className="marquee-wrapper scroll-left">
+              <div className="marquee-content">
+                {duplicatedCoachesDesktop.map((card, idx) => (
+                  <div key={`coach-${idx}`} className="marquee-card">
+                    <h4 className="coach-name">{card.name}</h4>
+                    <p className="coach-title">{card.title}</p>
                   </div>
-                </button>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      )}
+          </div>
+        )}
+      </div>
 
       <style>{`
-        /* Desktop Carousel Styles */
-        .carousel {
-          display: flex;
+        /* Section Styles */
+        .coach-section {
+          width: 100%;
+          padding: 10px 20px;
+          // background-color: #f7f7f7;
           overflow-x: hidden;
-          gap: 30px;
-          user-select: none;
-          cursor: grab;
+        }
+
+        .coach-container {
+          max-width: 1350px;
+          margin: 0 auto;
           width: 100%;
-        
-          margin: auto;
-          max-width: 1400px;
-          padding: 20px 0;
         }
 
-        .card {
-          width: 280px;
-          height: 390px;
-          position: relative;
-          flex: 0 0 auto;
-          overflow: hidden;
-          border-radius: 15px;
-          box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-          background: white;
-          transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-          transform: translateY(-5px);
-        }
-
-        .card-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: all 0.5s ease;
-          z-index: 1;
-        }
-
-        .text-overlay {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          background: rgb(255, 255, 255);
-          color: blue;
+        .coach-heading {
           text-align: center;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-          z-index: 2;
-          box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+          font-size: 32px;
+          font-weight: 700;
+          margin-bottom: 50px;
+          font-family: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif';
         }
 
-        .info-button {
-          background-color: transparent;
-          border: none;
-          color: inherit;
+        .heading-dark {
+          color: #333;
+        }
+
+        .heading-gold {
+          color: #eaae5e;
+          border-bottom: 3px solid #eaae5e;
+          padding-bottom: 5px;
+        }
+
+        /* Desktop Marquee Styles */
+        .marquee-row {
           width: 100%;
-          padding: 15px;
-          cursor: pointer;
-          border-radius: 10px;
-          transition: all 0.5s ease;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .marquee-wrapper {
+          overflow: hidden;
+          width: 100%;
+        }
+
+        .marquee-content {
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          overflow: hidden;
-          max-height: 80px;
+          gap: 25px;
+          width: max-content;
         }
 
-        .card:hover .info-button {
-          max-height: 250px;
-          padding: 20px 15px;
+        /* Left to right animation */
+        .scroll-left .marquee-content {
+          animation: scrollLeft 25s linear infinite;
         }
 
-        .info-header h3 {
+        /* Pause animation on hover */
+        .marquee-wrapper:hover .marquee-content {
+          animation-play-state: paused;
+        }
+
+        @keyframes scrollLeft {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.33%);
+          }
+        }
+
+        /* Card styling - only name and designation */
+        .marquee-card {
+          background: #fff;
+          padding: 20px 30px;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+          text-align: center;
+          min-width: 220px;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .marquee-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+          background: #fffaf5;
+        }
+
+        .coach-name {
+          margin: 0 0 8px 0;
           font-size: 18px;
+          font-weight: 600;
+          color: #222;
+        }
+
+        .coach-title {
           margin: 0;
-          font-weight: bold;
-          color: #2c3e50;
-        }
-
-        .info-header p {
-          font-size: 12px;
-          margin: 2px 0 8px 0;
-          color: #666;
-        }
-
-        .info-details {
-          opacity: 0;
-          transition: opacity 0.5s ease 0.2s;
-          text-align: left;
-          margin-top: 8px;
-          max-height: 0;
-          overflow: hidden;
-        }
-
-        .card:hover .info-details {
-          opacity: 1;
-          max-height: 150px;
-        }
-
-        /* Image moves to top-left circle on hover */
-        .card:hover .card-img {
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
-          top: 20px;
-          left: 20px; /* Changed from center to top-left */
-          transform: translateX(0); /* Removed centering transform */
-          border: 3px solid orange;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+          font-size: 13px;
+          color: #eaae5e;
+          font-weight: 500;
+          letter-spacing: 0.3px;
         }
 
         /* Mobile Grid Styles */
         .mobile-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          gap: 25px;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 20px;
           width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 20px;
         }
 
         .mobile-card {
-          background: white;
-          border-radius: 15px;
-          box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-          overflow: hidden;
-          transition: transform 0.3s ease;
+          background: #fff;
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+          text-align: center;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .mobile-card:hover {
-          transform: translateY(-5px);
+          transform: translateY(-4px);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+          background: #fffaf5;
         }
 
-        .mobile-card-content {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
+        .mobile-name {
+          margin: 0 0 8px 0;
+          font-size: 16px;
+          font-weight: 600;
+          color: #222;
         }
 
-        .mobile-image-container {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 20px;
+        .mobile-title {
+          margin: 0;
+          font-size: 12px;
+          color: #eaae5e;
+          font-weight: 500;
+          letter-spacing: 0.3px;
         }
 
-        .mobile-card-img {
-          width: 120px;
-          height: 120px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 3px solid orange;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        /* Responsive Breakpoints */
+        @media (max-width: 1200px) {
+          .coach-container {
+            max-width: 1140px;
+          }
         }
 
-        .mobile-text-content {
-          text-align: center;
+        @media (max-width: 992px) {
+          .coach-section {
+            padding: 40px 15px;
+          }
+          
+          .coach-heading {
+            font-size: 28px;
+            margin-bottom: 40px;
+          }
+          
+          .marquee-card {
+            padding: 16px 24px;
+            min-width: 200px;
+          }
+          
+          .coach-name {
+            font-size: 16px;
+          }
+          
+          .coach-title {
+            font-size: 12px;
+          }
+          
+          .scroll-left .marquee-content {
+            animation-duration: 20s;
+          }
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
+          .coach-section {
+            padding: 30px 15px;
+          }
+          
+          .coach-heading {
+            font-size: 24px;
+            margin-bottom: 30px;
+          }
+          
           .mobile-grid {
             grid-template-columns: 1fr;
-            max-width: 400px;
-            padding: 10px;
+            gap: 15px;
           }
           
           .mobile-card {
-            margin-bottom: 20px;
+            padding: 16px;
           }
           
-          .mobile-card-img {
-            width: 100px;
-            height: 100px;
+          .mobile-name {
+            font-size: 15px;
+          }
+          
+          .mobile-title {
+            font-size: 11px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .coach-section {
+            padding: 25px 12px;
+          }
+          
+          .coach-heading {
+            font-size: 20px;
+            margin-bottom: 25px;
+          }
+          
+          .heading-gold {
+            border-bottom: 2px solid #eaae5e;
+            padding-bottom: 3px;
+          }
+          
+          .mobile-card {
+            padding: 14px;
+          }
+          
+          .mobile-name {
+            font-size: 14px;
+            margin-bottom: 6px;
+          }
+          
+          .mobile-title {
+            font-size: 10px;
           }
         }
 
         @media (max-width: 480px) {
-          .mobile-grid {
-            padding: 5px;
+          .coach-heading {
+            font-size: 18px;
           }
           
-          .mobile-card-content {
-            padding: 15px;
+          .mobile-name {
+            font-size: 13px;
+          }
+          
+          .mobile-title {
+            font-size: 9px;
           }
         }
       `}</style>
     </div>
   );
-};
-
-const styles = {
-  wrapper: {
-    overflow: 'hidden',
-    padding: '20px',
-     maxWidth: "1200px",   // ✅ FIXED
-    margin: "0 auto",
-   
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  card: {
-    width: '300px',
-    height: '350px',
-    backgroundColor: '#fff',
-    borderRadius: '15px',
- 
-    position: 'relative',
-  },
 };
 
 export default CoachProfiles;

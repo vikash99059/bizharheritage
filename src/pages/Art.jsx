@@ -12,7 +12,7 @@ const ArtisansPage = () => {
       <ArtBanner />
       <Topartists />
       <SupportivePillars />
-      <ImageTrainSlider />
+      {/* <ImageTrainSlider /> */}
         {/* <Gellery /> */}
         <Footer />
 

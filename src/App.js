@@ -95,6 +95,10 @@ import SocialMediaFixed from './pages/SocialMediaFixed.jsx'
 import NewAbout from './pages/NewAbout';
 import Art from './pages/Art.jsx';
 import GA4Tracker from "./pages/GA4Tracker.jsx";
+import ProductDetailPage from './pages/ProductDetailPage.jsx';
+
+import CartPage from './pages/Cartpage.jsx';
+import Allproduct from './pages/Allproduct.jsx';
 
 function Layout() {
   const location = useLocation();
@@ -119,20 +123,21 @@ function Layout() {
   location.pathname === "/blog"||
   location .pathname === "/contact"||
   location.pathname === "/NewAbout"||
-  location.pathname === "/Art";
+  location.pathname === "/Art"||
+  location.pathname === "/all-products";
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column",backgroundColor:"#fefaf0" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column",backgroundColor:"white" }}>
       
       {/* NAVBARS */}
       {showLayout && <Navbar />}
       {showLayout1 && <Secondnavbar />}
 
       <ScrollToTop />
-<SocialMediaFixed/>
+{/* <SocialMediaFixed/> */}
       {/* PAGE CONTENT */}
       <div style={{ flexGrow: 1 }}>
-        <LoaderProvider>
+        {/* <LoaderProvider> */}
            <GA4Tracker/>
           <Routes>
            
@@ -148,13 +153,18 @@ function Layout() {
             <Route path="/vendor-jharkhand" element={<Jharkhandvendor />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/biharmarket" element={<Biharmarketpage />} />
-          <Route path="/what-we-offer-bihar/:productId?" element={<Whatweofferbihar />} />
+          <Route path="/what-we-offer-bihar" element={<Whatweofferbihar />} />
+        <Route path="/what-we-offer-bihar/:productId" element={<Whatweofferbihar />} />
+        <Route path="/product/:productId" element={<ProductDetailPage />} />
             <Route path="/what-we-offer-jharkhand" element={<Whatweofferjharkhand />} />
             <Route path="/blog" element={<Blogpage />} />
             <Route path="/NewAbout"element={<NewAbout/>}/>
             <Route path="/Art"element={<Art/>}/>
+
+             <Route path="/cart" element={<CartPage />} />
+              <Route path="/all-products" element={<Allproduct />} />
           </Routes>
-        </LoaderProvider>
+        {/* </LoaderProvider> */}
       </div>
       {/* FOOTER — ❌ vendor-bihar par nahi */}
       {!showLayout1 && <Footer />}

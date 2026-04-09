@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Vistuar from "./modules/Vistuar.jsx";
 import MainBanner from "../pages/modules/MainBanner.jsx";
-import Whychooesebihar from './modules/Whychooesebihar.jsx';
+
 // import NewwhychosesUS from "./NewwhychosesUS";
 // import Ourclints from "./Ourclints";
 // import Ourtestmonial from "./Ourtestmonial";
@@ -16,6 +16,7 @@ import Whychooesebihar from './modules/Whychooesebihar.jsx';
  import HandicraftGallery from "./HandicraftGallery.jsx";
   import Ourproduct from "./Ourproduct.jsx";
   import Mainbannernew from './Mainbannernew';
+  import Categry from '../pages/modules/Categry.jsx'
 
 const Home = () => {
   useEffect(() => {
@@ -35,18 +36,20 @@ const Home = () => {
         width: "100%",
       }}
     >
-      <div style={{  background: "#fefaf0" }}>
+      <div style={{  background: "#fff" }}>
        {/* <Mainbannernew/> */}
         <MainBanner />
+        <Categry/>
         {/* <Vistuar /> */}
         <HandicraftGallery />
         <Ourproduct/>
-        {/* <Whychooesebihar/> */}
-        <Ourbusinessmodel/>
-        <Ourpolicy/>
+       
+        {/* <Ourbusinessmodel/> */}
+        {/* <Ourpolicy/> */}
         {/* <HappyCustomers/> */}
         {/* <Ourteam/> */}
-        {/* <Videoalumni/> */}
+        <Videoalumni/>
+         <Ourproduct/>
         {/* <Business/> */}
         {/* <Footer/> */}
       </div>

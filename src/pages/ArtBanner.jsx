@@ -23,18 +23,17 @@ const ArtBanner = () => {
       style={{ backgroundImage: `url(${bannerImg})` }}
     >
       <div ref={textRef} className="art-banner-content">
-        <h1 className="art-title">
-          Meet Our <span>Artisans</span>
-        </h1>
-        <p className="art-subtitle">
-          Celebrating the hands that preserve heritage and culture
-        </p>
-      </div>
-
+  <h1 className="art-title">
+    Meet Our <span>Artisans</span>
+  </h1>
+  <p className="art-subtitle">
+    Connecting you with talented craftsmen across India and their unique handmade art..
+  </p>
+</div>
       <style>{`
         .art-banner {
           width: 100%;
-          min-height: 650px;
+          min-height: 300px;
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -67,7 +66,7 @@ const ArtBanner = () => {
         }
 
         .art-title {
-          font-size: 64px;
+          font-size: 45px;
           font-weight: 800;
         }
 
@@ -77,7 +76,7 @@ const ArtBanner = () => {
 
         .art-subtitle {
           margin-top: 16px;
-          font-size: 22px;
+          font-size: 18px;
         }
 
         @media (max-width: 768px) {

@@ -20,10 +20,10 @@
 }
 
 .team-list {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 25px;
 }
 
@@ -44,10 +44,11 @@
 .team-card.show {
   opacity: 1;
   transform: translateX(0);
+  flex-direction: column;
 }
 
 .team-card:nth-child(even) {
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 
 .team-card:nth-child(even) .team-content {

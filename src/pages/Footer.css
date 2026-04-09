@@ -1,0 +1,282 @@
+/* Premium Material UI Inspired Footer with Bihar Heritage Colors */
+.footer-premium {
+  background: linear-gradient(135deg, #f6a13c, #811d1d); /* Orange to dark red gradient */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #fff;
+  font-weight: 800; /* Bold text everywhere */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Main Footer Content - 4 Columns */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Columns */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo */
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  max-width: 190px;
+  height: auto;
+  filter: brightness(1);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.footer-logo img:hover {
+  opacity: 0.9;
+}
+
+/* Tagline */
+.footer-tagline {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #fffbe6; /* Light cream */
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  max-width: 240px;
+}
+
+/* Company Details */
+.footer-company-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.footer-detail-item {
+  font-size: 10px;
+  color: #fffbe6;
+  font-weight: 800;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.footer-detail-label {
+  font-weight: 800;
+  color: #fff3d6; /* lighter accent for labels */
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Titles */
+.footer-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff3d6; /* cream/light */
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: #ffd37f; /* gold accent */
+  border-radius: 2px;
+}
+
+/* Links List */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links li a {
+  color: #fffbe6;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links li a:hover {
+  color: #ffd37f; /* gold hover */
+  transform: translateX(5px);
+}
+
+/* Contact Items */
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  position: relative;
+}
+
+.footer-icon {
+  font-size: 0.95rem;
+  color: #fffbe6;
+  min-width: 20px;
+  text-align: center;
+}
+
+.footer-contact-link {
+  color: #fffbe6;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+  word-break: break-word;
+  flex: 1;
+}
+
+.footer-contact-link:hover {
+  color: #ffd37f; /* gold hover */
+}
+
+/* WhatsApp Wrapper */
+.footer-whatsapp-wrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* WhatsApp Button */
+.footer-whatsapp-btn {
+  background: #25D366;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  padding: 6px;
+  opacity: 0.9;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
+}
+
+.footer-whatsapp-btn:hover {
+  transform: scale(1.1);
+  background: #20ba5a;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.footer-whatsapp-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Business Hours */
+.footer-hours {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fffbe6;
+  font-weight: 800;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+
+.footer-copyright {
+  color: #fffbe6;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .footer-tagline { max-width: 100%; }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container { padding: 0 1.5rem; }
+  .footer-main { grid-template-columns: 1fr; gap: 1.8rem; }
+  .footer-col { width: 100%; }
+  .footer-logo img { max-width: 130px; }
+  .footer-title { margin-bottom: 0.8rem; }
+  .footer-contact-item { flex-wrap: wrap; }
+  .footer-whatsapp-wrapper { margin-left: 0; }
+  .footer-bottom { padding: 0.8rem 0; }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-premium { padding: 1.5rem 0 0; }
+  .footer-container { padding: 0 1rem; }
+  .footer-tagline { font-size: 0.8rem; }
+  .footer-title { font-size: 0.9rem; }
+  .footer-links li a { font-size: 0.8rem; }
+  .footer-contact-link { font-size: 0.8rem; }
+  .footer-hours { font-size: 0.75rem; flex-wrap: wrap; }
+  .footer-copyright { font-size: 0.7rem; }
+}
+
+/* Material UI Hover Effects */
+.footer-links li a { position: relative; overflow: hidden; }
+
+.footer-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffd37f; /* gold underline */
+  transition: width 0.3s ease;
+}
+
+.footer-links li a:hover::after { width: 100%; }
+
+/* Smooth Transitions */
+.footer-logo img,
+.footer-contact-link,
+.footer-whatsapp-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

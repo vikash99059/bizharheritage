@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaMap, FaLinkedinIn } from "react-icons/fa";
-import bannerImage from "../Biharimage/slider1.jpeg"; // path adjust karo
+import bannerImage from "../modules/image/bannernew2.avif"; // path adjust karo
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -130,7 +130,7 @@ const ContactPage = () => {
 
           /* Hero Banner */
           .bh-hero-banner {
-            height: 400px;
+            height: 350px;
             background:
               linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
               url(${bannerImage});
@@ -698,14 +698,14 @@ const ContactPage = () => {
       </style>
 
       {/* WhatsApp Floating Button */}
-      <div 
+      {/* <div 
         className="bh-whatsapp-float" 
         onClick={() => directWhatsApp(companyInfo.addresses[0].whatsapp)}
         title="Chat on WhatsApp"
         aria-label="WhatsApp Contact"
       >
         <FaWhatsapp />
-      </div>
+      </div> */}
 
       <div className="bh-contact-root">
         <div className="bh-contact-page">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Banner.css";
+
 
 /* ========== IMPORT ALL LEFT SIDE IMAGES ========== */
 import kurti1 from "./Productimage/silkkurti.jpeg";
