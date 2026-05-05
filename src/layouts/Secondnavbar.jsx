@@ -14,8 +14,8 @@ import {
   FaLinkedinIn, 
   FaYoutube 
 } from "react-icons/fa";
-
-import { FaXTwitter } from "react-icons/fa6"; // ✅ New X icon
+import { FaXTwitter } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5"; // ✅ Better close icon
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,73 +39,54 @@ const Navbar = () => {
         <ul className="nav-center">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/NewAbout">About</Link></li>
-
-          {/* EXPLORE DROPDOWN */}
-          {/* <li className="explore-item" onMouseEnter={() => setExploreOpen(true)} onMouseLeave={() => setExploreOpen(false)}>
-            <span className="explore-link">Explore ▾</span>
-            {exploreOpen && (
-              <ul className="dropdown">
-                <li><Link to="/about-bihar">Bihar</Link></li>
-                <li><Link to="/about-jharkhand">Jharkhand</Link></li>
-              </ul>
-            )}
-          </li> */}
-
           <li><Link to="/what-we-offer-bihar">Product</Link></li>
           <li><Link to="/Art">Craft Makers</Link></li>
-          {/* <li><Link to="/blog">Blog</Link></li> */}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
 
         {/* RIGHT SOCIAL */}
-      <div className="nav-right">
-        <a 
-          href="https://www.facebook.com/people/Bizhar-Heritag-E/61586597638647/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="social fb"
-        >
-          <FaFacebookF/>
-        </a>
-      
-        <a 
-          href="https://www.instagram.com/bizharheritage/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="social ig"
-        >
-          <FaInstagram/>
-        </a>
-      
-        {/* ✅ X (Twitter नया icon) */}
-        <a 
-          href="https://x.com/BiZharheritage" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="social tw"
-        >
-          <FaXTwitter/>
-        </a>
-      
-        <a 
-          href="https://www.linkedin.com/company/bizhar-heritage/posts/?feedView=all" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="social li"
-        >
-          <FaLinkedinIn/>
-        </a>
-      
-        {/* ✅ YouTube */}
-        <a 
-          href="https://youtube.com/@bizharheritage?si=xzHmpWtKVZ9hpyg5" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="social yt"
-        >
-          <FaYoutube/>
-        </a>
-      </div>
+        <div className="nav-right">
+          <a 
+            href="https://www.facebook.com/people/Bizhar-Heritag-E/61586597638647/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social fb"
+          >
+            <FaFacebookF/>
+          </a>
+          <a 
+            href="https://www.instagram.com/bizharheritage/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social ig"
+          >
+            <FaInstagram/>
+          </a>
+          <a 
+            href="https://x.com/BiZharheritage" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social tw"
+          >
+            <FaXTwitter/>
+          </a>
+          <a 
+            href="https://www.linkedin.com/company/bizhar-heritage/posts/?feedView=all" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social li"
+          >
+            <FaLinkedinIn/>
+          </a>
+          <a 
+            href="https://youtube.com/@bizharheritage?si=xzHmpWtKVZ9hpyg5" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social yt"
+          >
+            <FaYoutube/>
+          </a>
+        </div>
 
         {/* MOBILE MENU BUTTON */}
         <div className="menu-btn" onClick={() => setMenuOpen(true)}>☰</div>
@@ -113,30 +94,71 @@ const Navbar = () => {
 
       {/* MOBILE SIDEBAR */}
       <div className={`mobile-sidebar ${menuOpen ? "open" : ""}`}>
-        <Link to="/" className="logo-area">
+        {/* Close Button - Top Right */}
+        <button className="close-btn" onClick={() => setMenuOpen(false)}>
+          <IoClose /> {/* Better cut/close icon */}
+        </button>
+
+        {/* Logo in Sidebar */}
+        <div className="nav-left">
+          <Link to="/" className="logo-area" onClick={() => setMenuOpen(false)}>
             <img src={biharlogo} alt="logo" className="logo"/>
             <div className="logo-text">
-              <span className="slogan">Crafted Roots of Tradition</span>
+              <span className="slogan">Connecting Handicraft Artists Across India</span>
             </div>
           </Link>
-        <button className="close-btn" onClick={() => setMenuOpen(false)}>✕</button>
+        </div>
+
+        {/* Navigation Links */}
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link to="/NewAbout" onClick={() => setMenuOpen(false)}>About</Link>
-
-        {/* <div className="mobile-explore">
-          <span onClick={() => setExploreOpen(!exploreOpen)}>Explore ▾</span>
-          {exploreOpen && (
-            <div className="mobile-dropdown">
-              <Link to="/about-bihar" onClick={() => setMenuOpen(false)}>Bihar</Link>
-              <Link to="/about-jharkhand" onClick={() => setMenuOpen(false)}>Jharkhand</Link>
-            </div>
-          )}
-        </div> */}
-
         <Link to="/what-we-offer-bihar" onClick={() => setMenuOpen(false)}>Product</Link>
         <Link to="/Art" onClick={() => setMenuOpen(false)}>Craft Makers</Link>
-        {/* <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link> */}
         <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        
+        {/* Social Icons in Mobile Sidebar */}
+        <div className="mobile-social-icons">
+          <a 
+            href="https://www.facebook.com/people/Bizhar-Heritag-E/61586597638647/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social fb"
+          >
+            <FaFacebookF/>
+          </a>
+          <a 
+            href="https://www.instagram.com/bizharheritage/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social ig"
+          >
+            <FaInstagram/>
+          </a>
+          <a 
+            href="https://x.com/BiZharheritage" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social tw"
+          >
+            <FaXTwitter/>
+          </a>
+          <a 
+            href="https://www.linkedin.com/company/bizhar-heritage/posts/?feedView=all" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social li"
+          >
+            <FaLinkedinIn/>
+          </a>
+          <a 
+            href="https://youtube.com/@bizharheritage?si=xzHmpWtKVZ9hpyg5" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social yt"
+          >
+            <FaYoutube/>
+          </a>
+        </div>
       </div>
     </>
   );

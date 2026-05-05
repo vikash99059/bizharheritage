@@ -174,7 +174,7 @@ const CategorySection = ({ onCategorySelect }) => {
     return (
       <Box sx={{ py: 4 }}>
         <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: 'bold' }}>
-          Shop By Category
+         Curated Collections” or “Explore Premium Categories
         </Typography>
         <Alert 
           severity="error" 
@@ -194,7 +194,7 @@ const CategorySection = ({ onCategorySelect }) => {
     return (
       <Box sx={{ py: 4 }}>
         <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: 'bold' }}>
-          Shop By Category
+          Curated Collections” or “Explore Premium Categories
         </Typography>
         <Alert severity="info">No categories found.</Alert>
       </Box>
@@ -203,17 +203,37 @@ const CategorySection = ({ onCategorySelect }) => {
 
   return (
     <Box sx={{ py: 4, position: 'relative' }}>
-      <Typography 
-        variant="h4" 
-        gutterBottom 
-        sx={{ 
-          mb: 3, 
-          fontWeight: 'bold',
-          textAlign: 'center'
-        }}
-      >
-        Shop By Category
-      </Typography>
+      <Typography
+  variant="h5"
+  gutterBottom
+  sx={{
+    mb: 3,
+    fontWeight: 700,
+    textAlign: 'center',
+    letterSpacing: '1.2px',
+    fontSize: {
+      xs: '16px',   // mobile small
+      sm: '18px',
+      md: '22px',
+    },
+  }}
+>
+  <span style={{ color: '#000' }}>
+    Curated Collections
+  </span>{' '}
+
+  <span
+    style={{
+      color: '#eaae5e', fontWeight:"bold" // premium gold
+    }}
+  >
+    | Explore Premium
+  </span>{' '}
+
+  <span style={{ color: '#000' }}>
+    Categories
+  </span>
+</Typography>
 
       <Box sx={{ position: 'relative' }}>
         {/* Left Scroll Button */}

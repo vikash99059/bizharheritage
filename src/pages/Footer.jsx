@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "./jharkhandimage/BiZhar Heritage logo .png";
+import logoImage from "./vendorimage/BiZhar Heritage logo Social Media.png";
 
 import {
   Box,
@@ -15,8 +15,24 @@ import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import LanguageIcon from "@mui/icons-material/Language";
 
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import XIcon from "@mui/icons-material/X"; // for Twitter (X)
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const iconStyle = (hoverColor) => ({
+  mx: 0.7,
+  backgroundColor: "#fff",
+  boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
+  color: "#000",
+  "&:hover": {
+    backgroundColor: hoverColor,
+    color: "#fff",
+    transform: "translateY(-3px)",
+  },
+  transition: "0.3s ease",
+});
 
   return (
     <Box
@@ -84,61 +100,54 @@ const Footer = () => {
           </Stack>
 
           {/* Social Icons */}
-          <Box>
-            <IconButton
-              href="https://www.linkedin.com"
-              target="_blank"
-              sx={{
-                mx: 0.5,
-                backgroundColor: "#fff",
-                boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
-                "&:hover": {
-                  backgroundColor: "#0A66C2",
-                  color: "#fff",
-                  transform: "translateY(-2px)"
-                },
-                transition: "0.3s"
-              }}
-            >
-              <LinkedInIcon fontSize="small" />
-            </IconButton>
+          <Box display="flex" justifyContent="center" alignItems="center">
+      
+      {/* Facebook */}
+      <IconButton
+        href="https://www.facebook.com/people/Bizhar-Heritag-E/61586597638647/"
+        target="_blank"
+        sx={iconStyle("#1877F2")}
+      >
+        <FacebookIcon fontSize="small" />
+      </IconButton>
 
-            <IconButton
-              href="https://www.instagram.com"
-              target="_blank"
-              sx={{
-                mx: 0.5,
-                backgroundColor: "#fff",
-                boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
-                "&:hover": {
-                  backgroundColor: "#E1306C",
-                  color: "#fff",
-                  transform: "translateY(-2px)"
-                },
-                transition: "0.3s"
-              }}
-            >
-              <InstagramIcon fontSize="small" />
-            </IconButton>
+      {/* Instagram */}
+      <IconButton
+        href="https://www.instagram.com/bizharheritage/"
+        target="_blank"
+        sx={iconStyle("#E1306C")}
+      >
+        <InstagramIcon fontSize="small" />
+      </IconButton>
 
-            <IconButton
-              href="https://www.facebook.com"
-              target="_blank"
-              sx={{
-                mx: 0.5,
-                backgroundColor: "#fff",
-                boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
-                "&:hover": {
-                  backgroundColor: "#1877F2",
-                  color: "#fff",
-                  transform: "translateY(-2px)"
-                },
-                transition: "0.3s"
-              }}
-            >
-              <FacebookIcon fontSize="small" />
-            </IconButton>
-          </Box>
+      {/* X (Twitter) */}
+      <IconButton
+        href="https://x.com/BiZharheritage"
+        target="_blank"
+        sx={iconStyle("#000")}
+      >
+        <XIcon fontSize="small" />
+      </IconButton>
+
+      {/* LinkedIn */}
+      <IconButton
+        href="https://www.linkedin.com/company/bizhar-heritage/posts/?feedView=all"
+        target="_blank"
+        sx={iconStyle("#0A66C2")}
+      >
+        <LinkedInIcon fontSize="small" />
+      </IconButton>
+
+      {/* YouTube */}
+      <IconButton
+        href="https://www.youtube.com/@bizharheritage"
+        target="_blank"
+        sx={iconStyle("#FF0000")}
+      >
+        <YouTubeIcon fontSize="small" />
+      </IconButton>
+
+    </Box>
         </Box>
       </Box>
 
@@ -151,7 +160,7 @@ const Footer = () => {
           color: "#777"
         }}
       >
-        © {currentYear} Bihar & Jharkhand Heritage. All Rights Reserved.
+        © {currentYear} Connecting Handicraft Artists Across India. All Rights Reserved.
       </Typography>
     </Box>
   );

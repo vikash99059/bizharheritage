@@ -1411,7 +1411,7 @@ const BannerCarousel = () => {
           }
 
           .banner-title {
-            font-size: 48px;
+            font-size: 34px;
             font-weight: 700;
             margin-bottom: 16px;
             line-height: 1.2;

@@ -1,0 +1,130 @@
+.sales-team-section {
+  width: 100%;
+  padding: 8px 20px;
+  
+}
+
+.sales-team-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sales-team-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sales-team-header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a2a3f;
+}
+.sales-highlight {
+  color: #e89e31;
+  position: relative;
+  display: inline-block;
+}
+
+.sales-highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #a4091a;
+  border-radius: 2px;
+  transform: scaleX(0.7);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* hover effect (optional) */
+.sales-team-header:hover .sales-highlight::after {
+  transform: scaleX(1);
+}
+
+.sales-highlight {
+  color: #e89e31;
+  position: relative;
+}
+
+.sales-team-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sales-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s ease;
+}
+
+.sales-card.sales-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sales-card:hover {
+  transform: translateY(-10px);
+}
+
+.sales-image-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e89e31;
+}
+
+.sales-image-wrap img {
+  width: 100%;
+  height: 113%;
+  object-fit: cover;
+}
+
+.sales-content h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  color: #1a2a3f;
+}
+
+.sales-content h4 {
+  font-size: 12px;
+  color: #a4091a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sales-content p {
+  font-size: 13px;
+  color: #4a5b6e;
+  line-height: 1.5;
+}
+
+.sales-social a {
+  display: inline-flex;
+  margin-top: 15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eef3fc;
+  align-items: center;
+  justify-content: center;
+  color: #2c7da0;
+  transition: 0.3s;
+}
+
+.sales-social a:hover {
+  background: #2c7da0;
+  color: #fff;
+}

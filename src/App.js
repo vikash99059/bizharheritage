@@ -100,6 +100,7 @@ import ProductDetailPage from './pages/ProductDetailPage.jsx';
 import CartPage from './pages/Cartpage.jsx';
 import Allproduct from './pages/Allproduct.jsx';
 
+
 function Layout() {
   const location = useLocation();
 
@@ -139,6 +140,7 @@ function Layout() {
       <div style={{ flexGrow: 1 }}>
         {/* <LoaderProvider> */}
            <GA4Tracker/>
+          
           <Routes>
            
             <Route path="/" element={<Home />} />

@@ -13,6 +13,7 @@ import Footer from "./Footer.jsx";
 import Colabrate from "./Colabrate.jsx"; 
 import Founder from "./Allproduct.jsx";  
 import TechSupportTeam from "./TechSupportTeam.jsx"; 
+import Testapi from './Testapi'
 
 const AboutBanner = () => {
   const navigate = useNavigate();
@@ -93,21 +94,21 @@ const AboutBanner = () => {
         /* Mobile */
         @media (max-width: 480px) {
           .about-banner {
-            height: 75vh;
+            height: 32vh;
             background-attachment: scroll;
           }
 
           .about-title {
-            font-size: 1.7rem;
+            font-size: 12px;
           }
 
           .about-desc {
-            font-size: 0.95rem;
+            font-size: 9px;
           }
 
           .about-btn {
             padding: 12px 26px;
-            font-size: 0.9rem;
+            font-size: 8px;
           }
         }
       `}</style>
@@ -136,6 +137,7 @@ const AboutBanner = () => {
        {/* <Ourthout/> */}
        
        <Teamcomponanat/>
+       <Testapi/>
        {/* <Founder/> */}
        <Colabrate/>
         <Decated/>

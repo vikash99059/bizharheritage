@@ -5,22 +5,11 @@ import "./NewAbout.css";
 import team1 from "./Teamimage/ompathak.png";
 import team2 from "./Teamimage/Koushlsingh.png";
 import team3 from "./vendorimage/founder.jpeg";
-import team4 from "./vendorimage/deepeak.jpeg";   
+// import team4 from "./vendorimage/deepeak.jpeg";   
+import team4 from "./vendorimage/anjlithakur.jpeg";
 
 const teamData = [
-
 {
-    id: 3,
-    name: "Rashmi Gahlot",
-    role: "Co-founder, BiZhar Heritage",
-    desc: "Rashmi Gahlot supports the vision of BiZhar Heritage by helping in coordination and strengthening the mission of connecting and promoting traditional artists and handicrafts across India.",
-    image: team3,
-    social: {
-      linkedin: "https://www.linkedin.com/in/prachi-mishra-5418973a9/",
-    },
-  },
-
-  {
     id: 1,
     name: "Om Pathak",
     role: "Founder, BiZhar Heritage",
@@ -30,6 +19,7 @@ const teamData = [
       linkedin: "https://www.linkedin.com/in/om-pathak-813b3816b/",
     },
   },
+
   {
     id: 2,
     name: "Kaushal Singh",
@@ -40,17 +30,29 @@ const teamData = [
       linkedin: "https://www.linkedin.com/in/kaushal-kumar-singh-5562b91a0/",
     },
   },
-  
-  {
-    id: 4,
-    name: "Deepak Kumar",
-    role: "Head of Operations & Finance",
-    desc: "Head of Business Development, Operations & FinanceDeepak Kumar leads business growth, operations, and financial planning at BiZhar Heritage ",
-    image: team4,
+{
+    id: 3,
+    name: "Rashmi Gahlot",
+    role: "Co-founder, BiZhar Heritage",
+    desc: "Rashmi Gahlot supports the vision of BiZhar Heritage by helping in coordination and strengthening the mission of connecting and promoting traditional artists and handicrafts across India.",
+    image: team3,
     social: {
-      linkedin: "https://www.linkedin.com/in/prachi-mishra-5418973a9/",
+      linkedin: "https://www.linkedin.com/in/rashmi-gahlot-9a1b0a1a7/",
     },
   },
+
+  
+  
+  {
+  id: 4,
+  name: "Anjali Thakur",
+  role: "Creative Head – BiZhar Heritage",
+  desc: "Blending traditional art with modern Gen Z aesthetics, creating wearable art for the new generation and collaborating with artists and creative minds to shape the future of BiZhar Heritage.",
+  image: team4,
+  social: {
+    linkedin: "https://www.linkedin.com/in/anjali-thakur-3b6000405/",
+  },
+},
 ];
 
 const MeetTheTeam = () => {
@@ -215,7 +217,7 @@ const MeetTheTeam = () => {
 
         .team-image img {
           width: 100%;
-          height: 100%;
+          height: 105%;
           border-radius: 50%;
           object-fit: cover;
           transition: transform 0.5s ease;

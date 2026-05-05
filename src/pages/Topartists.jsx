@@ -659,7 +659,7 @@ export default function TestimonialSection() {
         }
 
         .testimonial-container {
-          max-width: 1350px;
+          max-width: 1450px;
           margin: auto;
           text-align: center;
         }
