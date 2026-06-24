@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useEffect, useRef } from "react";
 import bannerImg from "./Biharimage/selfcreaft.jpeg";
 
@@ -93,3 +94,4 @@ const ArtBanner = () => {
 };
 
 export default ArtBanner;
+

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 // import React, { useState, useEffect, useCallback, useRef } from 'react';
 // import './Allproduct.css';
 
@@ -373,6 +374,23 @@ function Allproduct() {
   };
 
   return (
+<>
+<Helmet>
+        <title>
+          Handmade Handicrafts & Home Decor | BiZhar Heritage
+        </title>
+
+        <meta
+          name="description"
+          content="Buy premium handmade handicrafts, home decor and artisan products online in India."
+        />
+
+        <meta
+          name="keywords"
+          content="handmade handicrafts India, home decor online, artisan products"
+        />
+      </Helmet>
+
     <Box className="app">
       <main className="main">
         <Container maxWidth="xl">
@@ -490,6 +508,7 @@ function Allproduct() {
         <p>&copy; 2026 Madhubani Heritage | Celebrating Traditional Indian Art</p>
       </footer>
     </Box>
+    </>
   );
 }
 

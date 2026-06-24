@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 // ProfilePage.jsx
 import React from "react";
 import profilePic from "./Biharimage/pngq.png"; // Apni image yahan import karein
@@ -136,3 +137,4 @@ const styles = {
 };
 
 export default ProfilePage;
+

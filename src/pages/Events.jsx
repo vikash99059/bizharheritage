@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState } from "react";
 import { FaEdit, FaTrash, FaBell, FaCalendar, FaList } from "react-icons/fa";
 
@@ -416,3 +417,4 @@ const AdminEventScreens = () => {
 };
 
 export default AdminEventScreens;
+

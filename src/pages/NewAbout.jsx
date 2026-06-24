@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 
 import React from "react";
 import bannerImage from "./modules/image/bannernew2.avif"; // apni image ka path
@@ -20,6 +21,21 @@ const AboutBanner = () => {
 
   return (
     <>
+    <Helmet>
+            <title>
+              Handmade Handicrafts & Home Decor | BiZhar Heritage
+            </title>
+    
+            <meta
+              name="description"
+              content="Buy premium handmade handicrafts, home decor and artisan products online in India."
+            />
+    
+            <meta
+              name="keywords"
+              content="handmade handicrafts India, home decor online, artisan products"
+            />
+          </Helmet>
       {/* Internal CSS */}
       <style>{`
         .about-banner {
@@ -152,4 +168,5 @@ const AboutBanner = () => {
 };
 
 export default AboutBanner;
+
 

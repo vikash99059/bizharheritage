@@ -1,5 +1,7 @@
+import { Helmet } from "react-helmet-async";
 const Settings = () => {
   return <h2>⚙️ Account Settings</h2>;
 };
 
 export default Settings;
+

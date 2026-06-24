@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState } from "react";
 import ProfileSidebar from "./ProfileSidebar";
 import ProfileOrders from "./ProfileOrders";
@@ -39,3 +40,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

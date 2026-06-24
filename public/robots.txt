@@ -1,3 +1,25 @@
-# https://www.robotstxt.org/robotstxt.html
+# ==========================================
+# BiZhar Heritage Robots.txt
+# ==========================================
+
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://bizharheritage.com/sitemap.xml
+
+# Optional AI Bot Blocking
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React from "react";
 import biharImage from "./Biharimage/thisbihar.jpg"; // apni image yahan import karein
 
@@ -126,3 +127,4 @@ const BiharMittiSection = () => {
 };
 
 export default BiharMittiSection;
+

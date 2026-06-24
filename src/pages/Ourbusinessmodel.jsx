@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React from "react";
 import bgImage from "./Biharimage/clutureexprience.jpeg"; // 🔴 apna background image
 import modelImage from "./Biharimage/businessmodel.jpeg"; // 🔴 left card image
@@ -168,3 +169,4 @@ const BusinessModelSection = () => {
 };
 
 export default BusinessModelSection;
+

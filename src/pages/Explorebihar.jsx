@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState, useEffect, useRef } from "react";
 
 // ✅ IMPORT IMAGES
@@ -207,3 +208,4 @@ const styles = {
 };
 
 export default BiharSegments;
+

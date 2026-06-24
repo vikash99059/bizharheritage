@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 
 import './Business.css'; // We'll create this CSS file
 

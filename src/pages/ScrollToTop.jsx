@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -16,3 +17,4 @@ const ScrollToTop = () => {
 };
 
 export default ScrollToTop;
+

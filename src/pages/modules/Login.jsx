@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 // import React, { useState } from "react";
 // import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaMap, FaLinkedinIn } from "react-icons/fa";
 // import bannerImage from "../modules/image/bannernew2.avif"; // path adjust karo
@@ -1120,6 +1121,22 @@ const ContactPage = () => {
 
   return (
     <>
+
+    <Helmet>
+        <title>
+          Handmade Handicrafts & Home Decor | BiZhar Heritage
+        </title>
+
+        <meta
+          name="description"
+          content="Buy premium handmade handicrafts, home decor and artisan products online in India."
+        />
+
+        <meta
+          name="keywords"
+          content="handmade handicrafts India, home decor online, artisan products"
+        />
+      </Helmet>
       <div className="bh-contact-root">
         <div className="bh-contact-page">
           {/* Hero Banner */}

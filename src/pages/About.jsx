@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 // import React from "react";
 // import leafImg1 from "./Biharimage/Thekua.jpg";
 // import leafImg2 from "./Biharimage/Thekua.jpg";
@@ -336,4 +337,5 @@ const AboutBihar = () => {
 };
 
 export default AboutBihar;
+
 

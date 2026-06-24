@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 // import React, { useState } from "react";
 // import "./Biharmarketpage.css";
 // import { FaHeart, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
@@ -409,3 +410,4 @@ const BiharMarketPage = () => {
 };
 
 export default BiharMarketPage;
+

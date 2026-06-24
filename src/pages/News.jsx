@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState } from "react";
 import { FaEdit, FaTrash, FaArchive } from "react-icons/fa";
 
@@ -308,3 +309,4 @@ const News = () => {
 };
 
 export default News;
+

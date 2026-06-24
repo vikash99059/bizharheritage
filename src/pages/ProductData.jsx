@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 // ProductData.js
 // Import images
 import kurti1 from "./Productimage/silkkurti.jpeg";
@@ -511,6 +512,7 @@ export const products = [
     description: "Beautiful handmade Maithili painting, traditional & vibrant artwork.",
   },
 ];
+
 
 
 
